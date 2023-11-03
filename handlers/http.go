@@ -14,7 +14,7 @@ import (
 
 const (
 	// StatusTooManyRequests represents HTTP 429, missing from net/http
-	StatusTooManyRequests = 429 // not in net/http package
+	StatusTooManyRequests = 200 // but we're replacing it with 200 beacause we want to tell sentry-clients "Everything is OK" even if everything is not OK
 )
 
 func flattenRateLimitHeaders(headers http.Header) common.M {
